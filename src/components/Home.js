@@ -1,8 +1,6 @@
 import { useSelector } from "react-redux";
 import NavigationBar from "./NavigationBar";
 
-import "react-dropdown/style.css";
-
 export default function Home(props) {
   const loginResponse = useSelector((state) => state.user.loginResponse);
   const dbResponse = useSelector((state) => state.user.dbResponse);
