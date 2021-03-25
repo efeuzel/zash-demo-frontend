@@ -12,8 +12,8 @@ export default function Login(props) {
 
   const success = (response) => {
     dispatch(assignLoginReponse(response.Qs.zt));
-    const email = response.Qs.zt;
-    const fullName = response.Qs.Te;
+    const email = response.profileObj.email;
+    const fullName = response.profileObj.name;
     const token = response.tokenObj.access_token;
 
     const user = { email: email, fullName: fullName, token: token };
